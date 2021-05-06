@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+
+  postgres_container:
+    image: postgres
+    container_name: postgres_container
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: btm
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5432:5432"
